@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>undefined</title>
+</head>
+
+<body>
+  <p>
+    Operator <b>typeof</b> służy do określania typu danych wartości lub wyrażenia.
+  </p>
+  <pre>const quantity = <span>17</span>;
+<span>log</span>(<span><b>typeof</b></span> quantity); <span>// wyświetli "number"</span>
+
+const message = <span>"JavaScript is awesome!"</span>;
+<span>console</span>.<span>log</span>(<span><b>typeof</b></span> message); <span>// wyświetli "string"</span>
+
+const isSidebarOpen = <span>false</span>;
+<span>console</span>.<span>log</span>(<span><b>typeof</b></span> isSidebarOpen); <span>// wyświetli "boolean"</span>
+
+let username;
+<span>console</span>.<span>log</span>(<span><b>typeof</b></span> username); <span>// wyświetli "undefined"</span>
+
+let status = <span>null</span>;
+<span>console</span>.<span>log</span>(<span><b>typeof</b></span> status); <span>// wyświetli "object"</span>
+</pre>
+  <p>Przy <b>null</b> wyświeli się "object", ale de facto null nie jest objektem tylko brakiem wartości.
+    Powodem tego jest to, że we wczesnych wersjach JavaScript, null był uważany za specjalny przypadek obiektu. Był to
+    błąd w implementacji języka.</p><br>
+
+
+
+</body>
+
+</html>
