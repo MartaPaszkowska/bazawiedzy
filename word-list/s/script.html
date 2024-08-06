@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title><code>&lt;script&gt;</code></title>
+</head>
+
+<body>
+  <p><b><code>&lt;script&gt;</code></b> aby dodać skrypt JavaScript do strony HTML, możesz użyć znacznika
+    <code>&lt;script&gt;</code>. Możesz to zrobić na kilka sposobów.<br><br>
+    <b>Skrypt wbudowany</b><br>
+    Możesz dodać kod JavaScript bezpośrednio wewnątrz znacznika
+    &lt;script&gt; wewnątrz znacznika &lt;head&gt;:
+  </p>
+  <pre><span>&lt;!DOCTYPE <span>html</span>&gt;</span>
+  <span>&lt;<span>html</span>&gt;</span>
+  <span>&lt;<span>head</span>&gt;</span>
+      <span>&lt;<span>title</span>&gt;</span>My HTML-page<span>&lt;/<span>title</span>&gt;</span>
+    <b>  <span>&lt;<span>script</span>&gt;</span><span><span>
+          <span>&lt;!--Twój kod JavaScript jest tutaj--&gt;</span>
+          console.log("Hello, world");
+      </span></span><span>&lt;/<span>script</span>&gt;</span></b>
+  <span>&lt;/<span>head</span>&gt;</span>
+  <span>&lt;<span>body</span>&gt;</span>
+      <span>&lt;!-- Zawartość strony --&gt;</span>
+  <span>&lt;/<span>body</span>&gt;</span>
+  <span>&lt;/<span>html</span>&gt;</span>
+  </pre>
+  <p><b>Skrypt zewnętrzny</b><br>
+    Po pierwsze, musisz utworzyć osobny plik z rozszerzeniem .js zawierający kod JavaScript.<br>
+    Następnie połączyć ten plik ze stroną HTML za pomocą znacznika
+    <code>&lt;script&gt;</code>, określając ścieżkę do pliku w atrybucie src:
+  </p>
+  <pre><span>&lt;!DOCTYPE <span>html</span>&gt;</span>
+  <span>&lt;<span>html</span>&gt;</span>
+  <span>&lt;<span>head</span>&gt;</span>
+      <span>&lt;<span>title</span>&gt;</span>My HTML-page<span>&lt;/<span>title</span>&gt;</span>
+    <b> <span>&lt;<span>script</span> <span>src</span>=<span>"my-script.js"</span> <span>defer</span>&gt;</span><span>&lt;/<span>script</span>&gt;</span></b>
+  <span>&lt;/<span>head</span>&gt;</span>
+  <span>&lt;<span>body</span>&gt;</span>
+      <span>&lt;!-- Zawartość strony --&gt;</span>
+  <span>&lt;/<span>body</span>&gt;</span>
+  <span>&lt;/<span>html</span>&gt;</span>
+  
+  </pre>
+  <p>Znacznik <code>&lt;script&gt;</code> z atrybutem defer może być wstawiony zarówno w sekcji
+    <code>&lt;head&gt;</code>, jak i
+    <code>&lt;body&gt;</code> na końcu za zawartością strony — nie ma to znaczenia.<br>
+
+    W tym przykładzie plik my - script.js zawiera kod JavaScript, który zostanie wykonany na stronie.<br>
+    Atrybut defer informuje przeglądarkę, że skrypt powinien zostać wykonany po całkowitym załadowaniu dokumentu
+    HTML.Pomaga to uniknąć opóźnień w wyświetlaniu zawartości strony.<br>
+    W wielu przypadkach lepiej jest używać zewnętrznych skryptów, aby kod był bardziej czytelny, łatwy w utrzymaniu i
+    nadający się do ponownego użycia.<br>
+  </p>
+</body>
+
+</html>
