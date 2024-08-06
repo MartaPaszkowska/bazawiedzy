@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>operatory matematyczne</title>
+</head>
+
+<body>
+  <p>
+    JavaScript posiada wiele <b>operatorów matematycznych</b>, które umożliwiają wykonywanie obliczeń arytmetycznych.
+  </p>
+  <div class="image"><img src="../../images/operatoryMatematyczne.png"></div>
+  <pre>
+<span>const</span> x = <span>8</span>;
+<span>const</span> y = <span>5</span>;<br>
+console.<span>log</span>(x <b>+</b> y); <span>// 13</span> // zwraca wynik dodawania<br>
+console.<span>log</span>(x <b>-</b> y); <span>// 3</span> // zwraca wynik odejmowania<br>
+console.<span>log</span>(x <b>*</b> y); <span>// 40</span> // zwraca wynik mnożenia<br>
+console.<span>log</span>(x <b>/</b> y); <span>// 1.6</span> // zwraca wynik dzielenia<br>
+console.<span>log</span>(x <b>%</b> y); <span>// 3</span> // zwraca resztę z dzielenia<br>
+console.<span>log</span>(x <b>**</b> y); <span>// 32768</span>// potęguje jedną liczbe przez drugą
+</pre>
+  <p>Dla wszystkich operatorów arytmetycznych istnieją równoważne <b>operatory złożone</b>. Pozwalają one wykonywać
+    operacje
+    arytmetyczne w bardziej kompaktowy sposób.<br><br>
+    Operatory arytmetyczne i ich złożone odpowiedniki:<br>
+
+    <b>Dodawanie: +=</b>. Przykład: <b>x += y</b> jest równoważne <b>x = x + y</b>.<br>
+    <b>Odejmowanie: -=</b>. Przykład: <b>x -= y</b> jest równoważne <b>x = x - y</b>.<br>
+    <b>Mnożenie: *=</b>. Przykład: <b>x * = y</b> jest równoważne <b>x = x * y</b>.<br>
+    <b>Dzielenie: /=</b>. Przykład: <b>x /= y</b> jest równoważne <b>x = x / y</b>.<br>
+    <b>Reszta z dzielenia: %=</b>. Przykład: <b>x %= y</b> jest równoważne <b>x = x % y</b>.
+  </p><br>
+  <pre>
+<span>let</span> age = 25;
+<span>age</span> += <span>1</span>; czyli <span>age</span> + <span>1</span> = age;
+<span>console</span>.log(age); // <span>26</span><br>
+</pre>
+
+
+</body>
+
+</html>
