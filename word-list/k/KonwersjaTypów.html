@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Konwersja typów</title>
+</head>
+
+<body>
+  <p>
+    <b>Konwersja typów (EN Type conversion)</b> w JavaScript — to proces zmiany wartości jednego typu danych na inny typ
+    danych. Istnieją dwa rodzaje konwersji w JavaScript: <b>jawna</b> i <b>niejawna</b>.
+  </p>
+  <p><b>Jawna konwersja typów</b><br><br>Aby przekonwertować dowolną wartość
+    na ciąg znaków, można użyć wbudowanej funkcji <b>String()</b>, która zwraca wynik jako ciąg znaków.</p>
+  <pre>
+      console.log(String(5)); // "5"
+      console.log(String(true)); // "true"
+      console.log(String(false)); // "false"
+      console.log(String(null)); // "null"
+      console.log(String(undefined)); // "undefined"
+    </pre>
+  <p>Konwersja do <b>Number()</b></p>
+  <pre>
+      console.log(Number("5")); // 5
+      console.log(Number(true)); // NaN
+  </pre>
+  <p>Konwersja do <b>Boolean()</b></p>
+  <pre>
+      console.log(Boolean("wszystko oprócz poniższych daje true")); // true
+      console.log(Boolean(false, 0, "", null, undefined, NaN)); // false
+  </pre>
+  <p>Konwersja do <b>Object()</b></p>
+  <pre>
+      let num = 42;
+      let obj = Object(num); // [Number: 42]
+        </pre>
+  <p><b>Niejawna konwersja typów</b><br><br>
+
+    Niejawna konwersja typów odbywa się automatycznie podczas wykonywania operacji lub obliczeń. Na przykład, jeśli
+    wykonywana jest operacja dodawania (+) między ciągiem znaków a innym typem danych, JavaScript automatycznie
+    konwertuje
+    wartość operandu na ciąg znaków i wykonuje <a href="../s/string.html">konkatenację</a> ciągu znaków.</p>
+  <pre>
+      console.log("5" + 3); // "53"
+      console.log("5" + true); // "5true"
+    </pre>
+</body>
+
+</html>

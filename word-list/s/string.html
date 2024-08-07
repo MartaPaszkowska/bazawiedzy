@@ -10,16 +10,25 @@
 
 <body>
   <p>
-    <b>Ciąg znaków (String)</b> — to sekwencja znaków ujęta w pojedyncze **''** lub podwójne "" cudzysłowy.
+    <b>Ciąg znaków (String)</b> — to sekwencja znaków ujęta w pojedyncze ' ' lub podwójne "" cudzysłowy.
   </p>
   <pre>
       const username <span>=</span> <span><b>'Mango995'</b></span><span>;</span>
       const description <span>=</span> <span><b>"JavaScript is awesome!"</b></span><span>;</span>
    </pre>
-
-
+  <p>Jeśli zastosujesz operator + do ciągu znaków i dowolnego innego typu danych, wynikiem będzie nowy ciąg znaków
+    zawierający połączenie oryginalnych wartości. Nazywa się to <b>konkatenacją</b>.</p>
+  <pre>
+const message = "Mango " + "is" + " happy";
+console.log(message); // "Mango is happy"<br>
+const age = 24;
+const message = "Poly is " + age + " years old!";
+console.log(message); // "Poly is 24 years old!"<br>
+console.log("Mango" + true); // "Mangotrue"<br>
+console.log(1 + 2 + "4"); // "34"
+    </pre>
   <p>Operator <a href="">typeof</a> służy do określania typu danych wartości lub wyrażenia.</p>
-
+  <p>Typy danych można zmienić za pomocą <a href="../k/KonwersjaTypów.html">konwersji</a>.</p>
   <p>Zobacz wszystkie <a href="../p/PrymitywneTypyDanych.html">typy prymitywne</a></p><br><br>
 
 </body>
