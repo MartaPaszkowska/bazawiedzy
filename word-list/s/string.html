@@ -13,20 +13,42 @@
     <b>Ciąg znaków (String)</b> — to sekwencja znaków ujęta w pojedyncze ' ' lub podwójne "" cudzysłowy.
   </p>
   <pre>
-      const username <span>=</span> <span><b>'Mango995'</b></span><span>;</span>
-      const description <span>=</span> <span><b>"JavaScript is awesome!"</b></span><span>;</span>
+      const username =<b>'Mango995'</b>;
+      const description =<b>"JavaScript is awesome!"</b>;
    </pre>
   <p>Jeśli zastosujesz operator + do ciągu znaków i dowolnego innego typu danych, wynikiem będzie nowy ciąg znaków
     zawierający połączenie oryginalnych wartości. Nazywa się to <b>konkatenacją</b>.</p>
   <pre>
-const message = "Mango " + "is" + " happy";
-console.log(message); // "Mango is happy"<br>
-const age = 24;
-const message = "Poly is " + age + " years old!";
-console.log(message); // "Poly is 24 years old!"<br>
-console.log("Mango" + true); // "Mangotrue"<br>
-console.log(1 + 2 + "4"); // "34"
+      const message = "Mango " + "is" + " happy";
+      console.log(message); // "Mango is happy"<br>
+      const age = 24;
+      const message = "Poly is " + age + " years old!";
+      console.log(message); // "Poly is 24 years old!"<br>
+      console.log("Mango" + true); // "Mangotrue"<br>
+      console.log(1 + 2 + "4"); // "34"
     </pre>
+  <p>Każdy znak ma swój własny numer sekwencji <b>(indeks)</b>. Indeksowanie elementów ciągu
+    rozpoczyna się od zera. Pierwszy znak ma indeks 0, drugi ma indeks 1, trzeci ma indeks 2 itd.</p>
+
+  <div class="image"><img src="../../images/string.jpg"></div>
+
+  <p>Aby uzyskać dostęp do określonego znaku w ciągu znaków, używamy składni nawiasów kwadratowych, w których określamy
+    indeks żądanego znaku:</p>
+
+  <pre>
+      const product = "Repair droid";
+      console.log(product<b>[0]</b>); // 'R'
+      console.log(product<b>[5]</b>); // 'r'
+    </pre>
+  <p>Aby znaleźć indeks ostatniego znaku ciągu, odejmij jeden od długości tego ciągu <b>string.length - 1</b></p>
+  <pre>
+      const product = "Repair droid";
+      const lastElementIndex = <b>product.length - 1</b>;
+      console.log(product[lastElementIndex]); // 'd'<br>
+      const product = "Repair droid";
+      console.log(product[<b>product.length - 1</b>]); // 'd'
+    </pre>
+
   <p>Operator <a href="">typeof</a> służy do określania typu danych wartości lub wyrażenia.</p>
   <p>Typy danych można zmienić za pomocą <a href="../k/KonwersjaTypów.html">konwersji</a>.</p>
   <p>Zobacz wszystkie <a href="../p/PrymitywneTypyDanych.html">typy prymitywne</a></p><br><br>

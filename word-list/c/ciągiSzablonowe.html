@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Ciągi szablonowe</title>
+</head>
+
+<body>
+  <p>
+    <b>Ciągi szablonowe (EN Template strings)</b> — to składnia, która ułatwia łączenie tekstu statycznego z tekstem
+    dynamicznym (tj. tekstem
+    zawierającym zmienne, obliczenia itp.). Ciągi szablonowe są zawijane w <b>backticki (``)</b>. Pozwalają na
+    zastępowanie
+    wartości zmiennych bezpośrednio wewnątrz ciągu przy użyciu składni
+    <b>interpolacji ${zmienna}</b>.
+  </p>
+  <pre>
+  const guestName = "Mango";
+  const roomNumber = 207;
+  const greeting = <b>`</b>Welcome <b>${guestName}</b>, your room number is <b>${roomNumber}</b>!<b>`</b>;
+  console.log(greeting); // "Welcome Mango, your room number is 207!"
+</pre>
+  <p>Kod z konkatenacją, gdzie:<br>
+    "Welcome " ", your room number is " i "!" są <b>statycznym tekstem</b>,<br>
+    guestName i roomNumber są nazwami zmiennych czyli <b>tekstem dynamicznym</b></p><br><br>
+</body>
+
+</html>
