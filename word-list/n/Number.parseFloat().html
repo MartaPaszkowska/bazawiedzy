@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Number.parseFloat()</title>
+</head>
+
+<body>
+  <p><b>Metoda Number.parseFloat()</b><br> jest podobna do metody Number.parseInt() z jedną różnicą: konwertuje ciąg
+    znaków na liczbę zmiennoprzecinkową. Jeśli pierwsze znaki ciągu znaków nie mogą zostać przekonwertowane na liczbę
+    lub jeśli ciąg znaków jest pusty lub go nie ma, wynikiem będzie NaN (Not a Number).</p>
+  <pre>
+      console.log(Number.parseFloat("5")); // 5
+      console.log(Number.parseFloat("5.5")); // 5.5
+      console.log(Number.parseFloat("3.14")); // 3.14
+      console.log(Number.parseFloat("5cm")); // 5
+      console.log(Number.parseFloat("5.5cm")); // 5.5
+      console.log(Number.parseFloat("12qwe74")); // 12
+      console.log(Number.parseFloat("12.46qwe79")); // 12.46
+      console.log(Number.parseFloat("cm5")); // NaN
+      console.log(Number.parseFloat("")); // NaN
+      console.log(Number.parseFloat("qweqwe")); // NaN
+</pre><br><br>
+</body>
+
+</html>

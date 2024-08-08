@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Number.parseInt()</title>
+</head>
+
+<body>
+  <p><b>Metoda Number.parseInt()</b><br>Metoda analizuje ciąg od lewej do prawej, usuwając spacje na początku i
+    konwertując prawidłowe znaki na liczbę, dopóki nie napotka pierwszego nieprawidłowego znaku. Następnie analiza
+    zostaje zatrzymana i zwracana jest już przekonwertowana liczba całkowita. Jeśli pierwsze znaki ciągu znaków nie mogą
+    zostać przekonwertowane na liczbę lub jeśli ciąg znaków jest pusty lub go nie ma, wynikiem będzie NaN (Not a
+    Number).</p>
+  <pre>
+      console.log(Number.parseInt("5")); // 5
+      console.log(Number.parseInt("5.5")); // 5
+      console.log(Number.parseInt("5cm")); // 5
+      console.log(Number.parseInt("12qwe74")); // 12
+      console.log(Number.parseInt("12.46qwe79")); // 12
+      console.log(Number.parseInt("cm5")); // NaN
+      console.log(Number.parseInt("")); // NaN
+      console.log(Number.parseInt("qweqwe")); // NaN
+
+</pre><br>
+</body>
+
+</html>

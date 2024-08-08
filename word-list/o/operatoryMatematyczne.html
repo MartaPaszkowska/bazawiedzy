@@ -14,14 +14,14 @@
   </p>
   <div class="image"><img src="../../images/operatoryMatematyczne.png"></div>
   <pre>
-<span>const</span> x = <span>8</span>;
-<span>const</span> y = <span>5</span>;<br>
-console.<span>log</span>(x <b>+</b> y); <span>// 13</span> // zwraca wynik dodawania<br>
-console.<span>log</span>(x <b>-</b> y); <span>// 3</span> // zwraca wynik odejmowania<br>
-console.<span>log</span>(x <b>*</b> y); <span>// 40</span> // zwraca wynik mnożenia<br>
-console.<span>log</span>(x <b>/</b> y); <span>// 1.6</span> // zwraca wynik dzielenia<br>
-console.<span>log</span>(x <b>%</b> y); <span>// 3</span> // zwraca resztę z dzielenia<br>
-console.<span>log</span>(x <b>**</b> y); <span>// 32768</span>// potęguje jedną liczbe przez drugą
+      const x = 8;
+      const y = 5;
+      console.log(x <b>+</b> y); // 13// zwraca wynik dodawania
+      console.log(x <b>-</b> y); // 3 // zwraca wynik odejmowania
+      console.log(x <b>*</b> y); // 40 // zwraca wynik mnożenia
+      console.log(x <b>/</b> y); // 1.6 // zwraca wynik dzielenia
+      console.log(x <b>%</b> y); // 3 // zwraca resztę z dzielenia
+      console.log(x <b>**</b> y);// 32768 // potęguje jedną liczbe przez drugą
 </pre>
   <p>Dla wszystkich operatorów arytmetycznych istnieją równoważne <b>operatory złożone</b>. Pozwalają one wykonywać
     operacje
@@ -35,12 +35,28 @@ console.<span>log</span>(x <b>**</b> y); <span>// 32768</span>// potęguje jedn�
     <b>Reszta z dzielenia: %=</b>. Przykład: <b>x %= y</b> jest równoważne <b>x = x % y</b>.
   </p><br>
   <pre>
-<span>let</span> age = 25;
-<span>age</span> += <span>1</span>; czyli <span>age</span> + <span>1</span> = age;
-<span>console</span>.log(age); // <span>26</span><br>
+      let age = 25;
+      age += 1; czyli age + 1 = age;
+      console.log(age); // 26<br>
 </pre>
-
-
+  <p><b>UWAGA</b> Podczas wykonywania operacji z liczbami ułamkowymi mogą wystąpić niedokładności spowodowane wewnętrzną
+    reprezentacją
+    liczb w pamięci komputera.</p>
+  <pre>
+      console.log(0.1 + 0.2 === 0.3); // false
+      console.log(0.1 + 0.2); // 0.30000000000000004
+</pre>
+  <p>Są na to dwa sposoby:</p>
+  <pre>
+      console.log((0.1 * 10 + 0.2 * 10) / 10); // 0.3
+</pre>
+  <p>lub za pomocą metody <b>toFixed()</b>. W celu zaokrąglenia wyniku do określonej liczby miejsc po przecinku. Metoda
+    ta zwraca string więc jeżeli chcemy otrzymać liczbę należy ją przekonwerować</p>
+  <pre>
+      console.log((0.1 + 0.2).toFixed(1)); // '0.3'
+      console.log((5).toFixed(2)); // '5.00'
+      console.log((8.762195).toFixed(4)); // '8.7622'
+</pre>
 </body>
 
 </html>

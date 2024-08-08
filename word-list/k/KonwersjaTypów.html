@@ -25,7 +25,10 @@
   <p>Konwersja do <b>Number()</b></p>
   <pre>
       console.log(Number("5")); // 5
-      console.log(Number(true)); // NaN
+      console.log(Number("Molly")); // NaN
+      console.log(Number(true)); // 1
+      console.log(Number(false)); // 0
+      console.log(Number(null)); // 0
   </pre>
   <p>Konwersja do <b>Boolean()</b></p>
   <pre>
@@ -41,12 +44,28 @@
 
     Niejawna konwersja typów odbywa się automatycznie podczas wykonywania operacji lub obliczeń. Na przykład, jeśli
     wykonywana jest operacja dodawania (+) między ciągiem znaków a innym typem danych, JavaScript automatycznie
-    konwertuje
-    wartość operandu na ciąg znaków i wykonuje <a href="../s/string.html">konkatenację</a> ciągu znaków.</p>
+    konwertuje wartość operandu na ciąg znaków i wykonuje <a href="../s/string.html">konkatenację</a> ciągu znaków.</p>
   <pre>
       console.log("5" + 3); // "53"
       console.log("5" + true); // "5true"
     </pre>
+  <p>Operacje arytmetyczne (+, -, *, /) również wykonują niejawną konwersję typu.</p>
+  <pre>
+      console.log("5" * 2); // 10
+      console.log("10" - 5); // 5
+      console.log(5 + true); // 6
+      console.log(5 - true); // 4
+</pre>
+  <p><b>Pamiętaj, że znak + obok operandów typu string powoduje ich konkatenację.</b></p>
+  <P>W przypadku korzystania z <a href="../o/operatoryPorównania.html">operatorów porównania</a> również wykonywana jest
+    niejawna konwersja typu. Jeśli operandy są różnych typów, są one konwertowane na liczbę przed porównaniem.</P>
+  <pre>
+      console.log("10" > 5); // true
+      console.log(10 > "5"); // true
+      console.log(5 > true); // true
+      console.log(5 &lt true); // false 
+      console.log("5" &lt true); // false
+    </pre><br><br>
 </body>
 
 </html>
