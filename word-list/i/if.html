@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>if</title>
+</head>
+
+<body>
+  <p><b>Instrukcja if</b> pozwala na wykonanie pewnego bloku kodu tylko w przypadku, jeśli dany warunek jest prawdziwy
+    (czyli przyjmuje wartość true). Każdy warunek jest sprawdzany kolejno od góry do dołu. Jeśli warunek condition_1
+    jest prawdziwy, wykonywany jest odpowiadający mu blok kodu i sprawdzanie jest zakończone. Jeśli warunek condition_1
+    jest fałszywy, to sprawdzany jest warunek_2 i tak dalej. Kod w bloku else zostanie wykonany tylko w przypadku, gdy
+    żaden z warunków w blokach if i else if nie jest prawdziwy. Dlatego łańcuch warunków należy czytać jako: "Szukam
+    pierwszego spełnionego warunku i ignoruję wszystko inne". Przykładowa składnia instrukcji if:</p>
+  <pre>
+      const grade = 85;
+      
+      if (grade >= 90) {
+      console.log("Perfectly");
+      } else if (grade >= 80) {
+      console.log("Good");
+      } else if (grade >= 70) {
+      console.log("Satisfactorily");
+      } else {
+      console.log("Unsatisfactorily");
+      }
+</pre>
+  <p>Ponieważ pierwszy warunek (grade >= 90) jest nieprawdziwy, ciało if nie jest wykonywane i sprawdzany jest następny
+    warunek (grade >= 80). Ten warunek jest prawdziwy, więc wykonane jest ciało else if, czyli
+    <b>console.log("Good")</b>. Dalsze
+    warunki nie będą już sprawdzane.</p>
+</body>
+
+</html>

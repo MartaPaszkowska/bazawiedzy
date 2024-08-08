@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>switch</title>
+</head>
+
+<body>
+  <p><b>Operator switch</b> pozwala wykonywać różne działania w zależności od wartości wyrażenia. Użycie switch jest
+    bardziej
+    kompaktowym i wygodnym sposobem na porównanie wyrażeń z wieloma wariantami niż instrukcje if...else i else...if.<br>
+    Oto ogólna składnia operatora switch:</p>
+  <pre>
+      switch (expression) {
+      case value1:
+      // kod wykonywany, jeśli wyrażenie (expression) jest równe value1
+      break;
+      case value2:
+      // kod wykonywany, jeśli wyrażenie (expression) jest równe value2
+      break;
+      // ...
+      default:
+      // kod wykonywany, jeśli wyrażenie (expression) nie odpowiada żadnej wartości
+      }
+</pre>
+  <p>Wyrażenie w bloku switch to wyrażenie dowolnego typu (zmienna lub złożone obliczenia), którego wynik jest
+    sekwencyjnie,
+    od góry do dołu, <b>ściśle porównywany (===)</b> ze wszystkimi wartościami w blokach case. Oznacza to, że nie można
+    porównać na
+    więcej lub mniej, tylko na ścisłą równość. Przykład:</p>
+  <pre>
+      const fruit = 'apple';
+      
+      switch (fruit) {
+      case 'apple':
+      console.log('Apple selected');
+      break;
+      case 'banana':
+      console.log('Banana selected');
+      break;
+      case 'orange':
+      console.log('Orange selected');
+      break;
+      default:
+      console.log('The fruit is unknown');
+      }
+
+</pre>
+  <p>Jeśli <b>break</b> nie zostanie podane, wykonanie kodu będzie kontynuowane w następnym case i tak dalej. Takie
+    zachowanie
+    nazywa się "przepływaniem" (fall-through). Jeśli potrzebne jest, aby kilka bloków case wykonywało ten sam kod, można
+    pominąć operator break pomiędzy nimi. Np:</p>
+  <pre>
+      const day = 3;
+      
+      switch (day) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      console.log('This is a working day');
+      break;
+      case 6:
+      case 7:
+      console.log('It is a day off');
+      break;
+      default:
+      console.log('Invalid');
+      }
+    </pre>
+  <p>W tym wypadku w konsoli </p>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>operator trójargumentowy</title>
+</head>
+
+<body>
+  <p><b>Operator trójargumentowy</b> zaleca się stosować w najprostszych przypadkach operacji przypisania lub zwracania
+    gdzie odpowiedz to tak lub nie. Budowa:</p>
+  <pre>
+      &ltcondition> ? &ltexpression if condition is true> : &ltexpression if condition is false>
+</pre>
+  <p>Przykładowy różnica w zastosowaniu opratora trójargumentowego i instrukcji if:</p>
+  <pre>
+      let type;
+      const age = 20;
+      
+      if (age >= 18) {
+      type = 'adult';
+      } else {
+      type = 'child';
+      }
+      
+      console.log(type); // 'adult'
+      
+</pre>
+  <pre>
+      const age = 20;
+      <b>const type = age >= 18 ? 'adult' : 'child';</b>
+      console.log(type); // 'adult'
+
+</pre>
+</body>
+
+</html>
