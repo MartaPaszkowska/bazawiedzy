@@ -26,18 +26,32 @@
     Nazwę zmiennej zapisujemy w notacji <a href="../c/camelCase.html">camelCase</a>. Warto pamiętać, że istnieją
     zarezerwowane <a href="../s/słowaKluczowe.html">słowa
       kluczowe</a>. <br>
-
-  <pre>
-    const age <span>=</span> <span>20</span><span>;</span><span> //deklaracja zmiennej const</span><br>
-    console.log(username)<span>;</span> //"Mango" // wywołanie zmiennej w konsoli <br>
-    let username<span>;</span><span> //deklaracja zmiennej let bez ustawienia wartości początkowej</span><br>
-    console.log(username)<span>;</span> //undefined // wywołanie zmiennej bez ustawienia wartości początkowej<br>
-    <span>username</span> <span>=</span> <span>"Poly"</span><span>;</span> // nadpisanie wartości<br>
-    console.log(username)<span>;</span> //"Poly" // wywołanie zmiennej po nadpisaniu wartości<br>
-    </pre><br><br> let username <span>=</span> <span>"Mango"</span><span>;</span><span> //deklaracja zmiennej
-    let</span><br>
-
   </p>
+  <pre>
+    const age = 20; //deklaracja zmiennej const
+    console.log(age);//20 // wywołanie zmiennej w konsoli<br>
+    let username; //deklaracja zmiennej let bez ustawienia wartości początkowej
+    console.log(username); //undefined // wywołanie zmiennej bez ustawienia wartości początkowej<br>
+    username ="Poly"; // nadpisanie wartości
+    console.log(username); //"Poly" // wywołanie zmiennej po nadpisaniu wartości
+  </pre>
+  <p><b>Zakres zmiennych (EN variables scope)</b> - Zmienne zadeklarowane poza jakimikolwiek blokami kodu, czyli w
+    zakresie globalnym, będą dostępne w dowolnym miejscu kodu. Są to <b>zmienne globalne.</b> Każda konstrukcja
+    używająca nawiasów klamrowych {} (warunki, pętle, funkcje itp.) tworzy nowy lokalny zakres widoczności tam powstają
+    <b>zmienne lokalne</b>. Zmienne zadeklarowane w zakresie lokalnym mogą być używane tylko w tym bloku kodu. Próba
+    użycia takiej zmiennej poza blokiem wywoła bład.
+  </p>
+  <pre>
+      function foo() {
+      // Zmienna lokalna
+      const value = "I'm a local variable"; 
+      console.log(value); // "I'm a local variable"
+      }
+      
+      console.log(value); // ReferenceError: value is not defined
+      // Błąd: zmienna lokalna nie jest widoczna poza funkcją
+</pre>
+
 </body>
 
 </html>

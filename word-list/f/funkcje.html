@@ -20,12 +20,65 @@
     <li>Treść funkcji w nawiasach klamrowych {}.</li>
   </ul>
   <pre>
-      function doStuff() {
+      <b>function doStuff()</b> {
       // Treść funkcji
       console.log('Log inside multiply function');
       }
-
 </pre>
+  <p>Do <b>wywołania funkcji</b>, służy jej nazwa i para nawiasów.</p>
+  <pre>
+      <b>doStuff();</b>// 'Log inside multiply function'
+  </pre>
+  <p><b>Parametry</b> są <a href="../z/zmienne.html">zmiennymi lokalnymi</a>, które są dostępne tylko w treści funkcji.
+    Parametry są oddzielane przecinkami. Funkcja może mieć dowolną liczbę parametrów lub nie mieć ich wcale — w takim
+    przypadku używane są puste nawiasy. Podczas wywoływania funkcji można przekazać <b>argumenty</b> w nawiasach, które
+    są wartościami zadeklarowanych parametrów funkcji.</p>
+  <pre>
+      // Deklaracja parametrów x, y, z
+      function multiply(<b>x, y, z</b>) {
+      console.log(`Result: ${x * y * z}`);
+      }
+      
+      // Przekazywanie argumentów
+      multiply(<b>2, 3, 5</b>); // "Result: 30"
+      multiply(<b>4, 8, 12</b>); // "Result: 384"
+      multiply(<b>17, 6, 25</b>); // "Result: 2550"
+    </pre>
+  <p>Instrukcja <b>return</b> służy do zwracania wartości z ciała funkcji z powrotem do kodu, do miejsca jej wywołania.
+    Gdy
+    interpreter napotka instrukcję return, natychmiast opuszcza funkcję (kończy jej wykonywanie) i zwraca wartość
+    określoną po return do miejsca, w którym funkcja została wywołana. Jeśli ciało funkcji nie zawiera instrukcji return
+    lub nie wskazuje na konkretną wartość, funkcja zwróci specjalną
+    wartość undefined. Gdy używasz instrukcji return, wszystkie instrukcje, które następują w wierszach po niej, nie są
+    wykonywane w ciele funkcji, ponieważ funkcja jest kończona natychmiast po napotkaniu instrukcji return.</p>
+  <pre>
+      function multiply(x, y, z) {
+      <b>return</b> x * y * z;
+      // Zwracamy wynik wyrażenia mnożenia
+      }
+      
+      // Wynik funkcji można zapisać w zmiennej
+      const result = multiply(2, 3, 5);
+      console.log(result); // 30
+    </pre>
+  <p>Gdy interpreter napotka wywołanie funkcji, zatrzymuje wykonywanie bieżącego kodu i rozpoczyna wykonywanie kodu z
+    ciała funkcji. Po wykonaniu całego kodu w funkcji, interpreter zwraca kontrolę do miejsca, z którego funkcja została
+    wywołana i kontynuuje wykonywanie pozostałego kodu programu.</p>
+  <pre>
+      function multiply(x, y, z) {
+      console.log(`Result: ${x * y * z}`);
+      }
+      
+      console.log("Log before multiply execution");
+      multiply(2, 3, 5); // "Result: 30"
+      console.log("Log after multiply execution");
+    </pre>
+  <p>
+    Kolejność logów w konsoli będzie następująca:<br><br>
+    "Log before multiply execution"<br>
+    "Result: 30"<br>
+    "Log after multiply execution"<br>
+  </p>
 </body>
 
 </html>
