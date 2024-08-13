@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>includes()</title>
+</head>
+
+<body>
+  <p>Metoda ciągów znaków <b>includes()</b> jest używana do sprawdzania obecności podciągu w ciągu. Zwraca wartość
+    logiczną true, jeśli podciąg zostanie znaleziony, i false, jeśli podciąg jest nieobecny. Składnia:</p>
+  <pre>
+      str.includes(substring)
+</pre>
+  <pre>
+      const username = 'Jacob Mercer';
+      
+      console.log(username.includes('Jacob')); // true
+      console.log(username.includes('jacob')); // false
+      console.log(username.includes('Mercer')); // true
+      console.log(username.includes('mercer')); // false
+</pre>
+</body>
+
+</html>

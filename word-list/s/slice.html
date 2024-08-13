@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>slice()</title>
+</head>
+
+<body>
+  <p>Metody <b>slice()</b> jest używana do tworzenia kopii części lub całego ciągu znaków bez zmiany oryginalnego ciągu.
+    Trzeba tylko określić indeks początkowy i końcowy. Składnia
+    metody slice() wygląda następująco:</p>
+  <pre>
+      str.slice(startIndex, endIndex)
+</pre>
+  <pre>
+      const fullName = "Jacob Mercer";
+      console.log(fullName.<b>slice(0, 4)</b>); // 'Jaco'
+      console.log(fullName.<b>slice(3, 9)</b>); // 'ob Mer'
+      console.log(fullName.<b>slice(0, fullName.length)</b>); // 'Jacob Mercer'
+</pre>
+  <p>Parametr endIndex jest opcjonalny. Jeśli endIndex nie jest określony, wyodrębniane są wszystkie elementy aż do
+    końca ciągu.</p>
+  <pre>
+      const fullName = "Jacob Mercer";
+      console.log(fullName.<b>slice(1)</b>); // 'acob Mercer'
+      console.log(fullName.<b>slice(3)</b>); // 'ob Mercer'
+</pre>
+  <p>Jeśli wywoła się metodę slice() bez argumentów, tworzy ona dokładną kopię ciągu i zwraca ją.</p>
+  <pre>
+      const fullName = "Jacob Mercer";
+      console.log(fullName.<b>slice()</b>); // 'Jacob Mercer'
+
+</pre>
+</body>
+
+</html>

@@ -9,8 +9,86 @@
 </head>
 
 <body>
-
-
+  <p>Mamy trzy <b>operatory logiczne</b>:</p>
+  <P>1. Operator <b>I -&&</b> - pozwala sprawdzić, czy wszystkie warunki w wyrażeniu są spełnione.</P>
+  <pre>
+      expression1 && expression2
+  </pre>
+  <p>Jeżeli wszystkie warunki są na true operator zwróci ostatni wynik np:</p>
+  <pre>
+      console.log("hello" && 5); // 5
+      console.log(5 && "hello"); // "hello"
+      
+      console.log("mango" && "poly"); // "poly"
+      console.log("poly" && "mango"); // "mango"
+      
+      console.log(3 && true); // true
+      console.log(true && 3); // 3
+</pre>
+  <p>Jeżeli chociaż jeden jest na false zwróci własnie ten np:</p>
+  <pre>
+  console.log('hello' && 0); // 0
+  console.log(0 && 'hello'); // 0
+  
+  console.log(3 && false); // false
+  console.log(false && 3); // false
+  
+  console.log(0 && ''); // 0
+  console.log('' && 0); // ""
+</pre>
+  <p>2. Operator <b>"LUB" (||)</b> - pozwala sprawdzić, czy przynajmniej jeden z operandów jest "prawdziwy".</p>
+  <pre>
+      expression1 || expression2
+</pre>
+  <p>Jeśli przynajmniej jeden z operandów można przekształcić na true, wynikiem logicznego "LUB" będzie ten operand.</p>
+  <pre>
+      console.log(true || false); // true
+      console.log(false || true); // true
+      
+      console.log(5 || false); // 5
+      console.log(false || 5); // 5
+      
+      console.log("hello" || 0); // "hello"
+      console.log(0 || "hello"); // "hello"
+  </pre>
+  <p>Jeśli wszystkie operandy przekształcają się na false, wynikiem będzie wartość skrajnego prawego operandu.</p>
+  <pre>
+      console.log(0 || false); // false
+      console.log(false || 0); // 0
+      
+      console.log(null || ""); // ""
+      console.log("" || null); // null
+  </pre>
+  <p>Logiczne <b>"NIE" (!)</b> to unarny operator — wykonuje operację na jednym operandzie po prawej stronie.</p>
+  <pre>
+      !expression
+  </pre>
+  <p>Logiczne "NIE" konwertuje operand na wartość logiczną (true lub false) i następnie je neguje (odwraca), czyli
+    zamienia
+    na przeciwne: true —> false, a false —> true.</p>
+  <pre>
+      console.log(!true); // false
+      console.log(!false); // true
+      console.log(!3); // !3 -> !true -> false
+      console.log(!"Mango"); // !"Mango" -> !true -> false
+      console.log(!0); // !0 -> !false -> true
+      console.log(!""); // !"" -> !false -> true
+      console.log(!null); // !null -> !false -> true
+    </pre>
+  <p>Negację logiczną można łączyć z innymi operatorami logicznymi. Na przykład, jeśli możliwość pisania na czacie
+    zależy od statusu online i blokady.</p>
+  <pre>
+      const isOnline = true;
+      const isBlocked = false;
+      const canChat = isOnline && !isBlocked;
+      // true && !false -> true && true -> true
+      
+      if(canChat) {
+      console.log("Can type in chat!")
+      } else {
+      console.log("Blocked from typing in chat!")
+      }
+    </pre>
 </body>
 
 </html>

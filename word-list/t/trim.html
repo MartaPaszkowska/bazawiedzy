@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>trim()</title>
+</head>
+
+<body>
+  <p>Metoda ciągów znaków <b>trim()</b> jest używana do usunięcia początkowych i końcowych spacji z ciągu znaków.
+    Pozwala to "oczyścić" ciąg znaków z niepotrzebnych spacji, na przykład podczas przetwarzania wprowadzonego tekstu
+    przez
+    użytkownika w elementach formularza, usuwając dodatkowe spacje, które mogły zostać dodane przypadkowo. Metoda trim()
+    nie zmienia oryginalnego ciągu znaków, lecz zwraca nowy ciąg znaków bez początkowych i końcowych spacji.</p>
+  <pre>
+      str.trim()
+</pre>
+  <pre>
+      const input = "  JavaScript is awesome!  ";
+      const trimmedInput = input<b>.trim()</b>;
+      console.log(trimmedInput); // "JavaScript is awesome!"
+      console.log(input); // "  JavaScript is awesome!  "
+
+
+</pre>
+</body>
+
+</html>
